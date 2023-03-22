@@ -11,8 +11,7 @@
 #GPT_OCNH/Altloc_GPT_Q04.py
 
 ---
-markdown
-Copy code
+
 # PDB File Processor
 
 This Python script processes PDB (Protein Data Bank) files by filtering and optionally modifying the 17th character of each line.
