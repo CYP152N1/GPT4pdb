@@ -28,10 +28,11 @@ This Python script processes PDB (Protein Data Bank) files by filtering and opti
 python script.py input.pdb output.pdb [options]
 ```
 
-Options
--s CHAR, --specified_char CHAR: The specified character to filter on. If not provided, the script will process lines with a space as the 17th character.
--r, --replace_17th_char: Replace the 17th character with a space.
-Examples
+## Options
+- -s CHAR, --specified_char CHAR: The specified character to filter on. If not provided, the script will process lines with a space as the 17th character.
+- -r, --replace_17th_char: Replace the 17th character with a space.
+
+## Examples
 Process a PDB file, keeping only lines with a space as the 17th character:
 
 ```sh
