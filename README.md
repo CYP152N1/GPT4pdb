@@ -46,6 +46,10 @@ Process a PDB file, keeping only lines with "A" as the alternative location (17t
 python Altloc_GPT_Q05.py input.pdb output.pdb -s A -r
 ```
 
+
+## License
+This project is licensed under the MIT License.
+
 ---
 
 #GPT_Rama/OCNHdiGPT4_Q27.py
@@ -88,3 +92,53 @@ This command will process the PDB file example.pdb, calculate the O-C-N-H dihedr
 ## Known Limitations
 The script assumes that the input PDB file has a standard naming convention for atom names and residue names.
 The script may not handle non-standard amino acids or non-standard atom names correctly.
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+GPT_ABEGO/abegoGPT4_Q06.py
+
+---
+
+# ABEGO Calculator
+
+A Python script to calculate Phi-Psi angles and classify the ABEGO region of protein residues from a PDB file.
+
+## Description
+The abegoGPT4_Q06.py script processes a given PDB file and extracts the Phi-Psi angles for each amino acid residue in the specified chain. It then classifies the ABEGO region for each residue based on the calculated angles and writes the results to a CSV file.
+
+## Dependencies
+-Python 3.6 or later
+-Biopython
+
+## Installation
+1. Install Python 3.6 or later if you haven't already.
+2. Install Biopython using pip:
+
+```
+pip3 install biopython
+```
+
+## Usage
+
+```
+python abegoGPT4_Q06.py <pdb_file> <chain_id> [-o <output_csv>]
+```
+
+## Arguments
+- <pdb_file>: The path to the input PDB file.
+- <chain_id>: The chain ID to process.
+- -o, --output (optional): The output CSV file name. If not specified, the output file will be named based on the input PDB file.
+
+## Example
+```
+python abegoGPT4_Q06.py example.pdb A -o example_A_phi_psi_abego.csv
+```
+
+This command processes the example.pdb file, extracts the Phi-Psi angles and ABEGO classification for chain A, and writes the results to example_A_phi_psi_abego.csv.
+
+## License
+This project is licensed under the MIT License.
+
