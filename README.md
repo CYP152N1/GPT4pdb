@@ -8,7 +8,7 @@
 
 ---
 
-#GPT_Altloc/Altloc_GPT_Q04.py
+#GPT_OCNH/Altloc_GPT_Q04.py
 
 ---
 markdown
@@ -47,7 +47,7 @@ python script.py input.pdb output.pdb -s A -r
 
 ---
 
-
+#GPT_Rama/OCNHdiGPT4_Q27.py
 
 ---
 
@@ -62,14 +62,19 @@ Biopython
 ## Installation
 Install Biopython using pip:
 ```
-pip install biopython
+pip3 install biopython
 ```
+or
+```
+python3 -m pip install biopython
+```
+
 Download the ocnh_dihedral_calculator.py script from this repository.
 
 ## Usage
 To use the OCNH Dihedral Angle Calculator, run the script from the command line with the following syntax:
 ```
-python ocnh_dihedral_calculator.py pdb_file chain_id [-a altloc] [-o output]
+python3 OCNHdiGPT4_Q27.py pdb_file chain_id [-a altloc] [-o output]
 ```
 
 ## Arguments
@@ -80,7 +85,7 @@ chain_id: Chain ID to process.
 
 ## Example
 ```
-python ocnh_dihedral_calculator.py example.pdb A -a A -o output.csv
+python3 OCNHdiGPT4_Q27.py example.pdb A -a A -o output.csv
 ```
 This command will process the PDB file example.pdb, calculate the O-C-N-H dihedral angles for chain A, and write the results to output.csv.
 
