@@ -55,8 +55,8 @@ python script.py input.pdb output.pdb -s A -r
 This is a Python script that calculates the dihedral angles between consecutive amino acid residues in a protein structure. The script reads a PDB file, extracts the O-C-N-H dihedral angles for each consecutive pair of residues in a specified chain, and writes the results to a CSV file.
 
 ## Requirements
-Python 3.7+
-Biopython
+- Python 3.7+
+- Biopython
 
 ## Installation
 Install Biopython using pip:
