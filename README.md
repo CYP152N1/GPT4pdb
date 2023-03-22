@@ -8,7 +8,7 @@
 
 ---
 
-#GPT_Altloc/Altloc_GPT_Q04.py
+#GPT_Altloc/Altloc_GPT_Q05.py
 
 ---
 markdown
@@ -37,13 +37,13 @@ python script.py input.pdb output.pdb [options]
 Process a PDB file, keeping only lines with a space as alternative location (the 17th character):
 
 ```sh
-python Altloc_GPT_Q04.py input.pdb output.pdb
+python Altloc_GPT_Q05.py input.pdb output.pdb
 ```
 Process a PDB file, keeping only lines with "A" as the alternative location (17th character) and replacing the 17th character with a space:
 
 
 ```sh
-python Altloc_GPT_Q04.py input.pdb output.pdb -s A -r
+python Altloc_GPT_Q05.py input.pdb output.pdb -s A -r
 ```
 
 ---
