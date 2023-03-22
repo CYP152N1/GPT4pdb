@@ -1,1 +1,1 @@
-# GPT4s_script_for_PDB
+# GPT4PDB -PDB treatment programs prepared by ChatGPT-
