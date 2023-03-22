@@ -1,4 +1,5 @@
 import sys
+import argparse
 
 def process_pdb_file(input_filename, output_filename, specified_char=None, replace_17th_char=False):
     with open(input_filename, "r") as input_file:
@@ -43,18 +44,12 @@ def write_pdb(lines, output_filename):
             output_file.write(line)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: python script.py <input_pdb_file> <output_pdb_file> [specified_char] [replace_17th_char]")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Process a PDB file and apply filters based on the 17th character.")
+    parser.add_argument("input_pdb_file", help="Path to the input PDB file.")
+    parser.add_argument("output_pdb_file", help="Path to the output PDB file.")
+    parser.add_argument("-s", "--specified_char", help="The specified character to filter on.")
+    parser.add_argument("-r", "--replace_17th_char", action="store_true", help="Replace the 17th character with a space.")
 
-    input_filename = sys.argv[1]
-    output_filename = sys.argv[2]
-    specified_char = None
-    replace_17th_char = False
+    args = parser.parse_args()
 
-    if len(sys.argv) >= 4:
-        specified_char = sys.argv[3]
-    if len(sys.argv) == 5:
-        replace_17th_char = bool(int(sys.argv[4]))
-
-    process_pdb_file(input_filename, output_filename, specified_char, replace_17th_char)
+    process_pdb_file(args.input_pdb_file, args.output_pdb_file, args.specified_char, args.replace_17th_char)
