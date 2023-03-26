@@ -139,3 +139,48 @@ This command processes the example.pdb file, extracts the Phi-Psi angles and ABE
 ## License
 This project is licensed under the MIT License.
 
+---
+
+GPT_pae/pae-GPTQ21.py
+
+---
+
+# 2D Heatmap Generator
+
+This Python script generates a 2D heatmap from a tab-delimited text file containing `i`, `j`, `pae_ij`, and `pae_ji` values. The generated heatmap uses the combined values of `pae_ij` and `pae_ji` and supports custom color maps.
+
+## Requirements
+
+- Python 3.6+
+- pandas
+- seaborn
+- matplotlib
+
+You can install the required packages using the following command:
+
+```
+pip install pandas seaborn matplotlib
+```
+
+## Usage
+
+```
+python pae-GPTQ21.py <file_path> [--cmap <color_map>]
+```
+
+- `<file_path>`: The path to the input text file (required).
+- `<color_map>`: The color map for the heatmap (optional, default: 'bwr').
+
+The input text file should be tab-delimited and contain the following columns: `i`, `j`, `pae_ij`, and `pae_ji`.
+
+## Example
+
+```
+python pae-GPTQ21.py input_file.txt --cmap coolwarm
+```
+
+This command will generate a 2D heatmap using the 'coolwarm' color map from the data in `input_file.txt`.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
