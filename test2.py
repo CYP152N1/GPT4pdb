@@ -7,9 +7,9 @@ import re
 import argparse
 
 # Add the directory containing the 'inference' module to the Python path
-rf_diffusion_inference_path = os.path.join(os.path.abspath("RFdiffusion"), "inference")
-if rf_diffusion_inference_path not in sys.path:
-    sys.path.append(rf_diffusion_inference_path)
+rf_diffusion_path = os.path.abspath("RFdiffusion")
+if rf_diffusion_path not in sys.path:
+    sys.path.append(rf_diffusion_path)
 
 from colabdesign.rf.utils import fix_contigs, fix_partial_contigs, fix_pdb
 from inference.utils import parse_pdb
