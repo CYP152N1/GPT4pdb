@@ -85,6 +85,7 @@ def run_diffusion(contigs, path, pdb=None, iterations=50,
 
   cmd = f"./RFdiffusion/run_inference.py {opts} inference.output_prefix=outputs/{path} inference.num_designs=1"
   print(cmd)
+  return contigs, copies
 
 def main():
     parser = argparse.ArgumentParser(description="Run RFdiffusion with specified arguments.")
