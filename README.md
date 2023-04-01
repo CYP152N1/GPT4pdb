@@ -184,3 +184,39 @@ This command will generate a 2D heatmap using the 'coolwarm' color map from the 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+GPT_PostVina/PostVina-GPT_Q27.py
+
+---
+
+# PDBQT Nearby Residues
+This script calculates the distance between atoms in a PDB file and atoms in a PDBQT file, and identifies nearby residues within a user-defined threshold.
+## Usage
+```
+python pdbqt_nearby_residues.py pdb_file pdbqt_file output_csv [-t threshold]
+
+```
+### Positional arguments
+- `pdb_file`: Input PDB file
+- `pdbqt_file`: Input PDBQT file
+- `output_csv`: Output CSV file
+
+### Optional arguments
+- `-t, --threshold`: Distance threshold for nearby residues (default: 5.0)
+
+## Dependencies
+- Python 3
+- NumPy
+- argparse
+
+## Example
+```
+python pdbqt_nearby_residues.py 1AKI.pdb 1AKI_ligand.pdbqt nearby_residues.csv -t 4.0
+
+```
+## License
+This software is released under the MIT License. See <a href="LICENSE" target="_new">LICENSE</a> for details.
+## Contact
+Please report any issues or suggestions via GitHub or email.
