@@ -187,36 +187,49 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-GPT_PostVina/PostVina-GPT_Q27.py
+GPT_PostVina/PostVina-GPT_Q38.py
 
 ---
 
-# PDBQT Nearby Residues
-This script calculates the distance between atoms in a PDB file and atoms in a PDBQT file, and identifies nearby residues within a user-defined threshold.
-## Usage
-```
-python pdbqt_nearby_residues.py pdb_file pdbqt_file output_csv [-t threshold]
+# PDBQT Nearby Residues Analyzer
+
+このプログラムは、PDBQTファイル内のモデルとPDBファイル内の構造の間の近接残基を検索し、それらをCSVファイルおよびスタックバーのグラフに出力します。
+
+## 必要条件
+
+- Python 3.6以上
+- matplotlibライブラリ
+
+## 使い方
+
+1. 必要なライブラリをインストールします。
+
 
 ```
-### Positional arguments
-- `pdb_file`: Input PDB file
-- `pdbqt_file`: Input PDBQT file
-- `output_csv`: Output CSV file
 
-### Optional arguments
-- `-t, --threshold`: Distance threshold for nearby residues (default: 5.0)
-
-## Dependencies
-- Python 3
-- NumPy
-- argparse
-
-## Example
-```
-python pdbqt_nearby_residues.py 1AKI.pdb 1AKI_ligand.pdbqt nearby_residues.csv -t 4.0
+pip install matplotlib
 
 ```
-## License
-This software is released under the MIT License. See <a href="LICENSE" target="_new">LICENSE</a> for details.
-## Contact
-Please report any issues or suggestions via GitHub or email.
+
+2. スクリプトを実行します。以下のコマンド例では、入力ファイルとして`input.pdb`および`input.pdbqt`を指定し、出力CSVファイルとして`output.csv`を指定します。また、距離の閾値はデフォルトの5.0Åとしています。
+
+
+```
+
+python pdbqt_nearby_residues_analyzer.py input.pdb input.pdbqt output.csv
+
+```
+
+3. スクリプトが正常に実行されると、以下のファイルが生成されます。
+
+- `output_list.csv`: 各近接残基の詳細情報が含まれています。
+- `output_count.csv`: 各残基番号に対する近接残基の数が含まれています。
+- `output.png`: 各残基番号に対する近接残基の数を示すスタックバーのグラフが表示されます。
+
+## コマンドラインオプション
+
+- `-t`, `--threshold`: 近接残基を検出するための距離の閾値を指定します（デフォルト: 5.0）。
+
+## ライセンス
+
+このプロジェクトは [MIT License](LICENSE) の下でライセンスされています。
