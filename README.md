@@ -15,7 +15,7 @@ ChatGPTとのやり取りの一部はmarkdown形式で保存されておりま�
 
 入力した構造のφ,ψの二面角からABEGOを調べる。
 
-- GPT_pae
+- GPT_PAE
 
 colabfoldのalphafold_advancedのログからPAEを描画する。
 
