@@ -191,6 +191,63 @@ GPT_PostVina/PostVina-GPT_Q38.py
 
 ---
 
+# Nearby Residues Finder
+This Python script analyzes PDB and PDBQT files to find nearby residues within a specified distance threshold. It generates a CSV file with a list of nearby residues, a stacked bar chart in PNG format showing the score of nearby residues per residue number, and another CSV file with counts of nearby residues.
+## Dependencies
+- Python 3.6+
+- matplotlib
+
+## Installation
+1. Clone the repository or download the script.
+2. Install the required dependencies using pip:
+
+
+```
+pip install matplotlib
+
+```
+## Usage
+```
+python nearby_residues_finder.py PDB_FILE PDBQT_FILE OUTPUT_PREFIX [-t THRESHOLD]
+
+```
+
+- `PDB_FILE`: Path to the input PDB file.
+- `PDBQT_FILE`: Path to the input PDBQT file.
+- `OUTPUT_PREFIX`: Prefix for output files. The script will generate files with the following names: `&lt;OUTPUT_PREFIX&gt;_list.csv`, `&lt;OUTPUT_PREFIX&gt;_count.csv`, and `&lt;OUTPUT_PREFIX&gt;.png`.
+- `-t THRESHOLD`: (Optional) Distance threshold for nearby residues. Default value is 5.0.
+
+### Example
+```
+python nearby_residues_finder.py input.pdb input.pdbqt output -t 5.0
+
+```
+
+This will generate three output files:
+
+- `output_list.csv`: List of nearby residues.
+- `output_count.csv`: Counts of nearby residues.
+- `output.png`: Stacked bar chart showing the score of nearby residues per residue number.
+
+## Functions
+- `parse_pdb(file_path)`: Parses a PDB file and returns a list of atom information.
+- `parse_pdbqt(file_path)`: Parses a PDBQT file and returns a list of models.
+- `calculate_distance(coord1, coord2)`: Calculates the Euclidean distance between two coordinates.
+- `find_nearby_residues(pdb_data, pdbqt_models, threshold)`: Finds nearby residues within the specified threshold.
+- `create_stacked_bar_chart(nearby_residues_list, output_image, threshold)`: Generates a stacked bar chart of the score of nearby residues per residue number.
+
+## Score of Nearby Residues
+The script calculates a score for each residue based on its proximity to the residues in the PDBQT models. The score is a linear function of the distance between the residues, with a value of 1 when the distance is 0, and 0 when the distance is equal to the specified threshold. The score for a residue is the sum of the scores for all the models in which it is nearby.
+
+The stacked bar chart visualizes the score of nearby residues per residue number. Each bar represents a residue and is divided into segments, with each segment corresponding to a PDBQT model. The height of the segment indicates the score of the residue in that model. Residue numbers are displayed at the top of each bar, and the legend shows the correspondence between the colors of the segments and the PDBQT models.
+
+To make it easier to read the chart, the vertical axis has a maximum value 10% higher than the maximum score, and the residue numbers are displayed on the horizontal axis without overlapping. The score of nearby residues can help to identify residues that are consistently near the residues in the PDBQT models, indicating potential interactions or binding sites.
+
+## License
+This project is open source and available under the <a href="LICENSE" target="_new">MIT License</a>.
+
+--
+
 # PDBQT Nearby Residues Analyzer
 
 このプログラムは、PDBQTファイル内のモデルとPDBファイル内の構造の間の近接残基を検索し、それらをCSVファイルおよびスタックバーのグラフに出力します。
