@@ -271,6 +271,8 @@ To make it easier to read the chart, the vertical axis has a maximum value 10% h
 ![cui_10](https://user-images.githubusercontent.com/87903303/229417903-189b3f79-3318-4388-8b37-711b47b2c574.png)
 
 
+<img src="https://user-images.githubusercontent.com/87903303/229417843-422f3b44-713f-4e6a-b8a9-60513877df88.png" width="5">
+
 ## License
 This project is open source and available under the <a href="LICENSE" target="_new">MIT License</a>.
 
