@@ -3,20 +3,25 @@
 
 ChatGPTとのやり取りの一部はmarkdown形式で保存されております。
 
--GPT_Altloc
+- GPT_Altloc
 
-特定のAlthernative conformationだけを取得する。
+特定のAlthernative conformationだけを取得する。（依頼作成）
 
--GPT_OCNH
+- GPT_OCNH
 
-ωの代わりに、O-Cα-N-Hの二面角をリストアップする。
+ωの代わりに、O-Cα-N-Hの二面角をリストアップする。（依頼作成）
 
--
--
--
--
--
+- GPT_ABEGO
 
+入力した構造のφ,ψの二面角からABEGOを調べる。
+
+- GPT_pae
+
+colabfoldのalphafold_advancedのログからPAEを描画する。
+
+- GPT_PostVina
+
+AutoDock Vinaの出力から、近接したアミノ酸を割り出すソフト。（依頼作成）
 
 
 ---
