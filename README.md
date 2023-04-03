@@ -3,6 +3,22 @@
 
 ChatGPTとのやり取りの一部はmarkdown形式で保存されております。
 
+-GPT_Altloc
+
+特定のAlthernative conformationだけを取得する。
+
+-GPT_OCNH
+
+ωの代わりに、O-Cα-N-Hの二面角をリストアップする。
+
+-
+-
+-
+-
+-
+
+
+
 ---
 
 #GPT_Altloc/Altloc_GPT_Q05.py
@@ -49,7 +65,7 @@ This project is licensed under the MIT License.
 
 ---
 
-#GPT_Rama/OCNHdiGPT4_Q27.py
+#GPT_OCNH/OCNHdiGPT4_Q27.py
 
 ---
 
