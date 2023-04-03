@@ -267,7 +267,7 @@ The stacked bar chart visualizes the score of nearby residues per residue number
 
 To make it easier to read the chart, the vertical axis has a maximum value 10% higher than the maximum score, and the residue numbers are displayed on the horizontal axis without overlapping. The score of nearby residues can help to identify residues that are consistently near the residues in the PDBQT models, indicating potential interactions or binding sites.
 
-THRESHOLD 5.0: THRESHOLD 4.0
+THRESHOLD 5.0 VS THRESHOLD 4.0
 
 <img src="https://user-images.githubusercontent.com/87903303/229417843-422f3b44-713f-4e6a-b8a9-60513877df88.png" width="45%"> <img src="https://user-images.githubusercontent.com/87903303/229417903-189b3f79-3318-4388-8b37-711b47b2c574.png" width="45%"> 
 
