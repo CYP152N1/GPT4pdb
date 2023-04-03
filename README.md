@@ -187,7 +187,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-GPT_PostVina/PostVina-GPT_Q38.py
+GPT_PostVina/PostVina-GPT_Q47.py
 
 ---
 
@@ -273,7 +273,7 @@ pip install matplotlib
 
 ```
 
-python pdbqt_nearby_residues_analyzer.py input.pdb input.pdbqt output.csv
+python pdbqt_nearby_residues_analyzer.py input.pdb input.pdbqt output
 
 ```
 
