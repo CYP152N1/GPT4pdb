@@ -200,7 +200,7 @@ The input text file should be tab-delimited and contain the following columns: `
 ## Example
 
 ```
-python pae-GPTQ21.py input_file.txt --cmap coolwarm
+python3 pae-GPTQ21.py input_file.txt --cmap coolwarm
 ```
 
 This command will generate a 2D heatmap using the 'coolwarm' color map from the data in `input_file.txt`.
@@ -211,7 +211,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-GPT_PostVina/PostVina-GPT_Q47.py
+GPT_PostVina/PostVina-GPT_Q48.py
 
 ---
 
@@ -243,7 +243,7 @@ python nearby_residues_finder.py PDB_FILE PDBQT_FILE OUTPUT_PREFIX [-t THRESHOLD
 
 ### Example
 ```
-python nearby_residues_finder.py input.pdb input.pdbqt output -t 5.0
+python3 PostVina-GPT_Q48.py input.pdb input.pdbqt output -t 5.0
 
 ```
 
@@ -280,7 +280,7 @@ This project is open source and available under the <a href="LICENSE" target="_n
 
 --
 
-# PDBQT Nearby Residues Analyzer
+# Nearby Residues Finder
 
 このプログラムは、PDBQTファイル内のモデルとPDBファイル内の構造の間の近接残基を検索し、それらをCSVファイルおよびスタックバーのグラフに出力します。
 
@@ -305,7 +305,7 @@ pip install matplotlib
 
 ```
 
-python pdbqt_nearby_residues_analyzer.py input.pdb input.pdbqt output
+python3 PostVina-GPT_Q48.py input.pdb input.pdbqt output
 
 ```
 
