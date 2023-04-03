@@ -21,8 +21,11 @@ colabfoldのalphafold_advancedのログからPAEを描画する。
 
 - GPT_PostVina
 
-AutoDock Vinaの出力から、近接したアミノ酸を割り出すソフト。（依頼作成）
+AutoDock Vinaの出力から、近接したアミノ酸を割り出す。（依頼作成）
 
+- GPT_Rama
+
+ラマチャンドランプロットを描画するだけ。
 
 ---
 
