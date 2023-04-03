@@ -266,12 +266,10 @@ The script calculates a score for each residue based on its proximity to the res
 The stacked bar chart visualizes the score of nearby residues per residue number. Each bar represents a residue and is divided into segments, with each segment corresponding to a PDBQT model. The height of the segment indicates the score of the residue in that model. Residue numbers are displayed at the top of each bar, and the legend shows the correspondence between the colors of the segments and the PDBQT models.
 
 To make it easier to read the chart, the vertical axis has a maximum value 10% higher than the maximum score, and the residue numbers are displayed on the horizontal axis without overlapping. The score of nearby residues can help to identify residues that are consistently near the residues in the PDBQT models, indicating potential interactions or binding sites.
-![cui_13](https://user-images.githubusercontent.com/87903303/229417843-422f3b44-713f-4e6a-b8a9-60513877df88.png)
 
-![cui_10](https://user-images.githubusercontent.com/87903303/229417903-189b3f79-3318-4388-8b37-711b47b2c574.png)
+THRESHOLD 5.0: THRESHOLD 4.0
 
-
-<img src="https://user-images.githubusercontent.com/87903303/229417843-422f3b44-713f-4e6a-b8a9-60513877df88.png" width="40%"> <img src="https://user-images.githubusercontent.com/87903303/229417903-189b3f79-3318-4388-8b37-711b47b2c574.png" width="40%"> 
+<img src="https://user-images.githubusercontent.com/87903303/229417843-422f3b44-713f-4e6a-b8a9-60513877df88.png" width="45%"> <img src="https://user-images.githubusercontent.com/87903303/229417903-189b3f79-3318-4388-8b37-711b47b2c574.png" width="45%"> 
 
 ## License
 This project is open source and available under the <a href="LICENSE" target="_new">MIT License</a>.
