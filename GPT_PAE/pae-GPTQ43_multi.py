@@ -12,12 +12,6 @@ metrics_df = pd.DataFrame()
 image_file_names = []
 
 def draw_heatmap(file_path, cmap='bwr', output_prefix=None, threshold=None):
-
-    # Get the output prefix based on input file name if not provided
-    #if output_prefix is None:
-    #    rank_number = int(re.search(r'rank_(\d+)_', file_path).group(1))
-    #    output_prefix = f"rank_{rank_number:04d}"
-
     try:
         # テキストファイルからデータをデータフレームに読み込みます。
         df = pd.read_csv(file_path, delimiter='\t')
@@ -51,7 +45,7 @@ def draw_heatmap(file_path, cmap='bwr', output_prefix=None, threshold=None):
             i_mean_values.plot(kind='bar')
             plt.xlabel('i')
             plt.ylabel('Sum p(cbcb<8)')
-            plt.title('Sum p(cbcb<8) for i < threshold and j > threshold (Grouped by i)')
+            plt.title('Sum p(cbcb<8) for i <= threshold and j > threshold (Grouped by i)')
             plt.xticks(range(0, len(i_mean_values), 10), i_mean_values.index[::10])
             plt.savefig(f'{output_prefix}_i_sum_bar_{suffix_i}.png')
 
@@ -59,7 +53,7 @@ def draw_heatmap(file_path, cmap='bwr', output_prefix=None, threshold=None):
             j_mean_values.plot(kind='bar')
             plt.xlabel('j')
             plt.ylabel('Sum p(cbcb<8)')
-            plt.title('Sum p(cbcb<8) for i < threshold and j > threshold (Grouped by j)')
+            plt.title('Sum p(cbcb<8) for i <= threshold and j > threshold (Grouped by j)')
             plt.xticks(range(0, len(j_mean_values), 10), j_mean_values.index[::10])
             plt.savefig(f'{output_prefix}_j_sum_bar_{suffix_j}.png')
 
@@ -293,8 +287,8 @@ if __name__ == "__main__":
     ax2 = ax1.twinx()
 
     # Plot the metrics on the second axis (right Y axis)
-    ax2.plot(metrics_df["rank"], metrics_df["sum_p_cbcb_div_threshold"], label="Sum p(cbcb<8) / threshold", linestyle="--", color="tab:orange")
-    ax2.plot(metrics_df["rank"], metrics_df["sum_p_cbcb_div_i_max_minus_threshold"], label="Sum p(cbcb<8) / (i_max - threshold)", linestyle="--", color="tab:green")
+    ax2.plot(metrics_df["rank"], metrics_df["sum_p_cbcb_div_threshold"], label="Sum p(cbcb<8) / 1st chain length", linestyle="--", color="tab:orange")
+    ax2.plot(metrics_df["rank"], metrics_df["sum_p_cbcb_div_i_max_minus_threshold"], label="Sum p(cbcb<8) / 2nd chain length)", linestyle="--", color="tab:green")
 
     # Set limits and labels for the second axis (right Y axis)
     ax2.set_ylim(0, 1)
