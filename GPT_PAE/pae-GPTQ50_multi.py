@@ -21,11 +21,11 @@ def draw_heatmap(file_path, cmap='bwr', output_prefix=None, threshold=None):
 
         if threshold is not None:
             filtered_df = df[(df['i'] <= threshold) & (df['j'] > threshold)]
-            avg_pae_ij = filtered_df['pae_ij'].mean()
-            avg_pae_ji = filtered_df['pae_ji'].mean()
+            avg_pae_ij = round(filtered_df['pae_ij'].mean(), 3)
+            avg_pae_ji = round(filtered_df['pae_ji'].mean(), 3)
             sum_p_cbcb = filtered_df['p(cbcb<8)'].sum()
-            sum_p_cbcb_div_threshold = sum_p_cbcb / threshold
-            sum_p_cbcb_div_i_max_minus_threshold = sum_p_cbcb / (maxi-threshold)
+            sum_p_cbcb_div_threshold = round(sum_p_cbcb / threshold, 3)
+            sum_p_cbcb_div_i_max_minus_threshold = round(sum_p_cbcb / (maxi-threshold), 3)
 
             print(f"Average pae_ij for i < {threshold} and j > {threshold}: {avg_pae_ij}")
             print(f"Average pae_ji for i < {threshold} and j > {threshold}: {avg_pae_ji}")
